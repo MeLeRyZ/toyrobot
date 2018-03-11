@@ -1,18 +1,10 @@
-defmodule Toyrobot do
-  @moduledoc """
-  Documentation for Toyrobot.
-  """
+defmodule ToyRobot do
+    def place do
+        %ToyRobot.Position{}
+    end
 
-  @doc """
-  Hello world.
+    def place(x, y, facing) do
+        %ToyRobot.Position{x: x, y: y, facing: facing}
+    end
 
-  ## Examples
-
-      iex> Toyrobot.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
