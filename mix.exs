@@ -3,14 +3,18 @@ defmodule Toyrobot.MixProject do
 
   def project do
     [
-      app: :toyrobot,
-      version: "0.1.0",
+      app: :toy_robot,
+      version: "1.0.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: escript() #for cli app
     ]
   end
 
+  defp escript do
+        [main_module: ToyRobot.CLI]
+  end
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
