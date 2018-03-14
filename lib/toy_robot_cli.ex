@@ -22,7 +22,7 @@ defmodule ToyRobot.CLI do
     defp execute_command(_unknown) do
         IO.puts "\nInvalid command. I don't know what to do."
         print_help_message()
-        receive_command
+        receive_command()
     end
 
     defp print_help_message do
