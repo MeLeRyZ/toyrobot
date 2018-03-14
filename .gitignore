@@ -22,3 +22,5 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 toyrobot-*.tar
 
+#Ignore exec file. to build it just run "mix escript.build"
+toy_robot
