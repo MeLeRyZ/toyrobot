@@ -24,7 +24,7 @@ defmodule ToyRobot.StatefulRobot do
     def right, do: Agent.update(__MODULE__, &(ToyRobot.right(&1)))
 
     def report do
-        Agent.get(__MODULE__, &(ToyRobot.report(&1))) #EQUALS " fn state -> ToyRobot.report(state) end "
+        Agent.get(__MODULE__, &(&1)) |> ToyRobot.report #EQUALS " fn state -> ToyRobot.report(state) end "
     end
     # def report do
     #     send(StatefulRobot, {:report, self()})
